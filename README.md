@@ -1,36 +1,6 @@
-# code-quiz
-# 04 Web APIs: Code Quiz
+# Code Quiz
 
-As you proceed in your career as a web developer, you will probably be asked to complete a coding assessment, which is typically a combination of multiple-choice questions and interactive challenges. Build a timed code quiz with multiple-choice questions. This app will run in the browser and feature dynamically updated HTML and CSS powered by your JavaScript code. It will also feature a clean and polished user interface and be responsive, ensuring that it adapts to multiple screen sizes.
-
-## User Story
-
-```
-AS A coding bootcamp student
-I WANT to take a timed quiz on JavaScript fundamentals that stores high scores
-SO THAT I can gauge my progress compared to my peers
-```
-
-## Acceptance Criteria
-
-```
-GIVEN I am taking a code quiz
-WHEN I click the start button
-THEN a timer starts and I am presented with a question
-WHEN I answer a question
-THEN I am presented with another question
-WHEN I answer a question incorrectly
-THEN time is subtracted from the clock
-WHEN all questions are answered or the timer reaches 0
-THEN the game is over
-WHEN the game is over
-THEN I can save my initials and score
-```
-
-
-# Password Generator
-
-- This is an Australian Shepherd quiz application that asks a series of five random questions. Each question has one correct answer and incorrect answers. This application will run in the browser with a clean and polished user interface. This application is responsive, allowing it to adapt to multiple screen sizes, including mobile. An HTML validation service was used to ensure the page has valid HTML.
+- This is a timed Australian Shepherd quiz application that asks a series of five random questions with local storage for high scores. Each question has one correct answer and three wrong answers. To begin, you click the start button and a random question is generated with answers to choose from. This application will run in the browser with a clean and polished user interface. This application is responsive, allowing it to adapt to multiple screen sizes, including mobile.
 
 ---
 
@@ -67,23 +37,20 @@ THEN I can save my initials and score
 
 - GitHub repository with README describing the project
 
-- When button is clicked a password is generated based on the user's given criteria
+- Each page has valid and correct, semantic HTML with validation service used
 
-- User is presented with a series of prompts for password criteria
+- When start button is clicked a question and four answers are generated and the 30 second timer begins
 
-- User is prompted to select password length with a minimum of 8 and maximum of 128 characters
+- When a correct answer is selected the background and answer will turn green and wrong answers will be revealed as red
 
-- User can choose character types to include in the password that include lowercase, uppercase, numeric, and/or special characters
+- When a wrong answer is selected the background and wrong answers will turn red, revealing the correct green answer, and time is subtracted from the clock
 
-- User input is validated and at least one character type should be selected
+- After an answer is selected a clickable next button will appear to proceed to the next question
 
-- Password is generated that matches the criteria once all prompts are answered and button is clicked
+- When all questions are answered or the timer reaches zero, the game is over
 
-- Password is displayed on the page
+- The user can then save their initials and score at the end
 
-- Semantic html used
-
-- Each page has valid and correct HTML. (use a validation service)
 ```
 
 ---
