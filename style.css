@@ -1,14 +1,17 @@
+/* global styling to make easier for setting width, height, and font */
 *, *::before, *::after {
 box-sizing: border-box;
 font-family: Arial, Helvetica, sans-serif;
 }
 
+/* defined hues for color */
 :root {
   --hue-neutral: 200;
   --hue-wrong: 0;
   --hue-correct: 145;
 }
 
+/* center content with no padding */
 body {
   --hue: var(--hue-neutral);
   padding: 0;
@@ -21,31 +24,36 @@ body {
   background-color: hsl(var(--hue), 100%, 20%);
 }
 
+/* correct answer background hue is green */
 body.correct {
   --hue: var(--hue-correct);
 }
 
+/* wrong answer background hue is red */
 body.wrong {
   --hue: var(--hue-wrong);
 
 }
 
+/* styling for container that holds content */
 .container {
   width: 800px;
   max-width: 80%;
-  background-color: white;
+  background-color: rgb(203, 209, 211);
   border-radius: 5px;
   padding: 10px;
   box-shadow: 0 0 10px 2px;
 }
 
-.btm-grid {
+/* button spacing */
+.btn-grid {
   display: grid;
   grid-template-columns: repeat(2, auto);
   gap: 10px;
   margin: 20px 0;
 }
 
+/* button styling */
 .btn {
  --hue: var(--hue-neutral);
   border: 1px solid hsl(var(--hue), 100%, 30%);
@@ -56,33 +64,38 @@ body.wrong {
   outline: none;
 }
 
+/* hover effect for buttons */
 .btn:hover {
   border-color: black;
 
 }
 
+/* correct answer button hue is green */
 .btn.correct {
   --hue: var(--hue-correct);
   color: black;
 }
 
+/* wrong answer button hue is red */
 .btn.wrong {
   --hue: var(--hue-wrong);
 }
 
+/* start and next button styling */
 .start-btn, .next-btn {
   font-size: 1.5rem;
   font-weight: bold;
   padding: 10px 20px;
 }
 
-
+/* centers buttons  */
 .controls {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+/* hides content except start button */
 .hide {
   display: none;
 }

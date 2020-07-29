@@ -4,18 +4,20 @@ const questionContainerElement = document.getElementById('question-container')
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
 
+// know which random shuffled question quiz is on
 let shuffledQuestions, currentQuestionIndex
 
 startButton.addEventListener('click', startGame)
+
 nextButton.addEventListener('click', () => {
   currentQuestionIndex++
   setNextQuestion()
 })
 
-
-// start game
+// starts game
 function startGame() {
-  // start timer
+
+  // starts timer
   var total_seconds = 30 * 1;
   var c_minutes = parseInt(total_seconds / 60);
   var c_seconds = parseInt(total_seconds % 60);
@@ -37,20 +39,23 @@ function startGame() {
 
   function score() {
     clearInterval(timer);
-    // stop timer
+    // stops timer
   }
   startButton.classList.add('hide')
-  shuffledQuestions = questions.sort(() => Math.random() - .5)
+
+  shuffledQuestions = questions.sort(() => Math.random() - .5) // shuffles questions
   currentQuestionIndex = 0
   questionContainerElement.classList.remove('hide')
   setNextQuestion()
 }
 
+// random shuffled question on next
 function setNextQuestion() {
   resetState()
   showQuestion(shuffledQuestions[currentQuestionIndex])
 }
 
+// shows questions and answers
 function showQuestion(question) {
   questionElement.innerText = question.question
   question.answers.forEach(answer => {
@@ -65,6 +70,7 @@ function showQuestion(question) {
   })
 }
 
+// resets questions and answers to default state on each new question
 function resetState() {
   clearStatusClass(document.body)
   nextButton.classList.add('hide')
@@ -74,6 +80,7 @@ function resetState() {
   }
 }
 
+// effect when an answer is selected
 function selectAnswer(e) {
   const selectedButton = e.target
   const correct = selectedButton.dataset.correct
@@ -89,6 +96,7 @@ function selectAnswer(e) {
   }
 }
 
+// effect if answer is correct or wrong
 function setStatusClass(element, correct) {
   clearStatusClass(element)
   if (correct) {
@@ -98,12 +106,13 @@ function setStatusClass(element, correct) {
   }
 }
 
+// removes correct or wrong answer effect
 function clearStatusClass(element) {
   element.classList.remove('correct')
   element.classList.remove('wrong')
 }
 
-// quiz questions
+// question and answer arrays
 const questions = [
   {
     question: 'Where did Australian Shepherds originate?',
