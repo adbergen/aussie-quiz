@@ -39,16 +39,6 @@ body.wrong {
   box-shadow: 0 0 10px 2px;
 }
 
-.container {
-  width: 800px;
-  max-width: 80%;
-  background-color: white;
-  border-radius: 5px;
-  padding: 10px;
-  box-shadow: 0 0 10px 2px;
-}
-
-
 .btm-grid {
   display: grid;
   grid-template-columns: repeat(2, auto);

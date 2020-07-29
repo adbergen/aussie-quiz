@@ -12,8 +12,33 @@ nextButton.addEventListener('click', () => {
   setNextQuestion()
 })
 
+
+// start game
 function startGame() {
-  console.log('Started')
+  // start timer
+  var total_seconds = 30 * 1;
+  var c_minutes = parseInt(total_seconds / 60);
+  var c_seconds = parseInt(total_seconds % 60);
+  var timer;
+
+  function CheckTime() {
+    document.getElementById("timers").innerHTML = 'Time Left: ' + c_seconds + ' seconds ';
+
+    if (total_seconds <= 0) {
+      score();
+    } else {
+      total_seconds = total_seconds - 1;
+      c_minutes = parseInt(total_seconds / 60);
+      c_seconds = parseInt(total_seconds % 60);
+      timer = setTimeout(CheckTime, 1000);
+    }
+  }
+  timer = setTimeout(CheckTime, 1000);
+
+  function score() {
+    clearInterval(timer);
+    // stop timer
+  }
   startButton.classList.add('hide')
   shuffledQuestions = questions.sort(() => Math.random() - .5)
   currentQuestionIndex = 0
@@ -78,6 +103,7 @@ function clearStatusClass(element) {
   element.classList.remove('wrong')
 }
 
+// quiz questions
 const questions = [
   {
     question: 'Where did Australian Shepherds originate?',
