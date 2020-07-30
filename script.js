@@ -3,7 +3,7 @@ const nextButton = document.getElementById('next-btn')
 const questionContainerElement = document.getElementById('question-container')
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
-
+var total_seconds = 30 * 1;
 // know which random shuffled question quiz is on
 let shuffledQuestions, currentQuestionIndex
 
@@ -18,7 +18,7 @@ nextButton.addEventListener('click', () => {
 function startGame() {
 
   // starts timer
-  var total_seconds = 30 * 1;
+
   var c_minutes = parseInt(total_seconds / 60);
   var c_seconds = parseInt(total_seconds % 60);
   var timer;
@@ -50,6 +50,7 @@ function startGame() {
   // wrong answer subtract 5 sec
 
 }
+
 
 // random shuffled question on next
 function setNextQuestion() {
@@ -98,6 +99,7 @@ function selectAnswer(e) {
     alert("You Win!")
     $('#start-btn').click(function () {
       window.location = 'highscores.html';
+      window.prompt("Please enter your initials", "AB");
     });
   }
 }
@@ -116,17 +118,18 @@ function setStatusClass(element, correct) {
 function clearStatusClass(element) {
   element.classList.remove('correct')
   element.classList.remove('wrong')
+
 }
 
 // score begin
-var answers =
+var score = 0
 
-  function getScore() {
-    var score = 0;
-    for (var i = 0; i < tot; i++)
-      if (getCheckedValue("question" + i) === answers[i]) score += 1;
-    return score;
-  }
+function getScore() {
+  var score = 0;
+  for (var i = 0; i < tot; i++)
+    if (getCheckedValue("question" + i) === answers[i]) score += 1;
+  return score;
+}
 
 function returnScore() {
   alert("Your score is " + getScore() + "/" + tot);
