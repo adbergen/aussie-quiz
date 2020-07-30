@@ -96,7 +96,8 @@ function selectAnswer(e) {
   if (shuffledQuestions.length > currentQuestionIndex + 1) {
     nextButton.classList.remove('hide')
   } else {
-    startButton.innerText = 'Restart'
+    startButton.innerText = 'Enter Your High Score!'
+    $
     startButton.classList.remove('hide')
   }
 }
@@ -116,6 +117,21 @@ function clearStatusClass(element) {
   element.classList.remove('correct')
   element.classList.remove('wrong')
 }
+
+// score begin
+var answers =
+
+  function getScore() {
+    var score = 0;
+    for (var i = 0; i < tot; i++)
+      if (getCheckedValue("question" + i) === answers[i]) score += 1;
+    return score;
+  }
+
+function returnScore() {
+  alert("Your score is " + getScore() + "/" + tot);
+}
+// score end
 
 // question and answer arrays
 const questions = [
