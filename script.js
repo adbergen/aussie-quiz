@@ -26,8 +26,10 @@ function startGame() {
   function CheckTime() {
     document.getElementById("timers").innerHTML = 'Time Left: ' + c_seconds + ' seconds ';
 
-    if (total_seconds <= 0) {
-      score();
+    if (total_seconds < 0) {
+      clearInterval(timer)
+      alert("Time is up!");
+
     } else {
       total_seconds = total_seconds - 1;
       c_minutes = parseInt(total_seconds / 60);
@@ -36,17 +38,20 @@ function startGame() {
     }
   }
   timer = setTimeout(CheckTime, 1000);
+  // stop timer
 
-  function score() {
-    clearInterval(timer);
-    // stops timer
-  }
   startButton.classList.add('hide')
 
   shuffledQuestions = questions.sort(() => Math.random() - .5) // shuffles questions
   currentQuestionIndex = 0
   questionContainerElement.classList.remove('hide')
   setNextQuestion()
+
+  // wrong answer subtract 5 sec
+  document.getElementById('wrong').addEventListener('click', function () {
+    sec -= 5;
+    document.getElementById('timers').innerHTML = '00:' + sec;
+  });
 }
 
 // random shuffled question on next
