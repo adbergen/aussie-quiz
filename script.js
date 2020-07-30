@@ -96,7 +96,9 @@ function selectAnswer(e) {
     startButton.innerText = 'Enter Your High Score!'
     startButton.classList.remove('hide')
     alert("You Win!")
-
+    $('#start-btn').click(function () {
+      window.location = 'highscores.html';
+    });
   }
 }
 
