@@ -48,10 +48,7 @@ function startGame() {
   setNextQuestion()
 
   // wrong answer subtract 5 sec
-  document.getElementById('wrong').addEventListener('click', function () {
-    sec -= 5;
-    document.getElementById('timers').innerHTML = '00:' + sec;
-  });
+
 }
 
 // random shuffled question on next
@@ -97,8 +94,9 @@ function selectAnswer(e) {
     nextButton.classList.remove('hide')
   } else {
     startButton.innerText = 'Enter Your High Score!'
-    $
     startButton.classList.remove('hide')
+    alert("You Win!")
+
   }
 }
 
