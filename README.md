@@ -1,57 +1,72 @@
-# Code Quiz
+<h1 align="center">
+Aussie Quiz
+</h1>
+<h4 align="center" style="margin-bottom:10px">Be sure to star my configuration repo so you can keep up to date on any daily progress!</h4>
+<div align="center">
+  <h4>
+    </a>
+    <a href="https://github.com/adbergen/aussie-quiz/stargazers"><img src="https://img.shields.io/github/stars/adbergen/aussie-quiz.svg?style=plasticr"/></a>
+    <a href="https://github.com/adbergen/aussie-quiz/commits/master"><img src="https://img.shields.io/github/last-commit/adbergen/aussie-quiz.svg?style=plasticr"/></a>
+        <a href="https://github.com/adbergen/aussie-quiz/commits/master"><img src="https://img.shields.io/github/commit-activity/y/adbergen/aussie-quiz.svg?style=plasticr"/></a>
+</h4>
+<br>
+</div>
+<p align="center"><font size="3">
+This is an Australian Shepherd themed quiz application.</p>
+<div align="center"><a name="menu"></a>
+  <h4>
+    <a href="https://github.com/adbergen/aussie-quiz">
+      Github Repository
+    </a>
+<span> | </span>
+<a href="https://adbergen.github.io/aussie-quiz/">
+      Github Pages
+    </a>
+  </h4>
+</div>
 
-- This is a timed Australian Shepherd quiz application that asks a series of five random questions with local storage for high scores. Each question has one correct answer and three wrong answers. To begin, you click the start button and a random question is generated with answers to choose from. This application will run in the browser with a clean and polished user interface. This application is responsive, allowing it to adapt to multiple screen sizes, including mobile.
+![Screenshot of application demo](assets/demo.png)
 
----
+<hr>
 
-## File Contents
+## Table of Contents
 
-```
-- README.md (this file)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Technologies](#technologies)
+- [Contributing](#contributing)
 
-- style.css
+<hr>
 
-- index.html
+## Installation
 
-- script.js
-```
+- Open the index.html file in your web browser
 
----
+<hr>
 
-## Languages Used
+## Usage
 
-```
-- HTML/HTML5 is used for structure of information for webpage
+- This timed application asks the user a series of multiple choice questions in a random order. A score is stored in a highscore page via local storage.
 
-- CSS and Bootstrap are used for styling of the website
+<hr>
 
-- Javascript is used for powering the password generator
-```
+## Technologies
 
----
+<ul>
+<li>HTML</li>
+<li>CSS</li>
+<li>Bootstrap</li>
+<li>Javascript</li>
+<li>JQuery</li>
+<li>GitHub</li>
+</ul>
 
-## Requirements Met
+<hr>
 
-```
-- Functional, deployed application
+## Contributing
 
-- GitHub repository with README describing the project
+- Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-- Each page has valid and correct, semantic HTML with validation service used
+- Contributors: Anthony Bergen
 
-- When start button is clicked a question and four answers are generated and the 30 second timer begins
-
-- When a correct answer is selected the background and answer will turn green and wrong answers will be revealed as red
-
-- When a wrong answer is selected the background and wrong answers will turn red, revealing the correct green answer, and time is subtracted from the clock
-
-- After an answer is selected a clickable next button will appear to proceed to the next question
-
-- When all questions are answered or the timer reaches zero, the game is over
-
-- The user can then save their initials and score at the end
-
-```
-
----
----
+<hr><hr>
